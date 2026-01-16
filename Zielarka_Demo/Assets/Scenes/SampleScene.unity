@@ -194,11 +194,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   rb: {fileID: 2929000}
-  moveSpeed: 4
-  acceleration: 2
-  deceleration: 4
+  moveSpeed: 10
+  acceleration: 8
+  deceleration: 8
   velPower: 2
-  frictionAmount: 0.2
+  frictionAmount: 0.5
 --- !u!1 &87400027
 GameObject:
   m_ObjectHideFlags: 0
