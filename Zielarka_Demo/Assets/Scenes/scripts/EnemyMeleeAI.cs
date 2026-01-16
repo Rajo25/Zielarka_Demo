@@ -1,5 +1,5 @@
 using UnityEngine;
-using AbilitiesSystem.Scripts;   
+using AbilitiesSystem.Scripts;  
 
 public class EnemyMeleeAI : MonoBehaviour
 {
@@ -69,8 +69,8 @@ public class EnemyMeleeAI : MonoBehaviour
 
     private void SetNewPatrolPoint()
     {
-        Vector2 randomPoint = Random.insideUnitCircle * patrolRadius;
-        patrolTarget = (Vector2)transform.position + randomPoint;
+        float randomX = Random.Range(-patrolRadius, patrolRadius);
+        patrolTarget = new Vector2(transform.position.x + randomX, transform.position.y);
     }
 
     private void ChaseAndAttack(float distance)

@@ -1,4 +1,5 @@
 using UnityEngine;
+using AbilitiesSystem.Scripts; 
 
 public class EnemyRangedAI : MonoBehaviour
 {
@@ -59,7 +60,6 @@ public class EnemyRangedAI : MonoBehaviour
         }
 
         transform.position = Vector2.MoveTowards(transform.position, patrolTarget, speed * Time.deltaTime);
-
         FlipByMovement();
 
         if (Vector2.Distance(transform.position, patrolTarget) < 0.1f)
@@ -71,8 +71,8 @@ public class EnemyRangedAI : MonoBehaviour
 
     private void SetNewPatrolPoint()
     {
-        Vector2 randomPoint = Random.insideUnitCircle * patrolRadius;
-        patrolTarget = (Vector2)transform.position + randomPoint;
+        float randomX = Random.Range(-patrolRadius, patrolRadius);
+        patrolTarget = new Vector2(transform.position.x + randomX, transform.position.y);
     }
 
     private void EngagePlayer(float distance)
