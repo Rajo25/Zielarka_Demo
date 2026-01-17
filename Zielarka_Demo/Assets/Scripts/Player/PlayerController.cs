@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private float _moveInput;
     public float frictionAmount = 0.2f;
    
-    [Header("GroundCheck")]
+    [Header("Ground Check")]
     private bool _isGrounded;
     public LayerMask whatIsGround;
     public Vector2 groundCheckOffset;
@@ -27,7 +27,13 @@ public class PlayerController : MonoBehaviour
     private float _jumpBuffer;
     private bool _isJumping;
     public float jumpCutMultiplier = 10f;
-    private bool _jumpInputReleased;
+    public float fallMultiplier = 10f;
+    public float maxFallSpeed = -20f;
+    public float fallAcceleration = 5f;
+    private float _currentFallMultiplier = 1f;
+    [Header("Apex Hang")]
+    public float apexThreshold = 0.5f;
+    public float apexHangMultiplier = 0.4f;
         
     private void FixedUpdate()
     {
@@ -35,6 +41,35 @@ public class PlayerController : MonoBehaviour
         if (_jumpBuffer > 0 && _coyoteTime > 0 && !_isJumping)
         {
             Jump();
+        }
+        if (Mathf.Abs(rb.linearVelocity.y) < apexThreshold)
+        {
+            rb.AddForce(
+                Physics2D.gravity * ((apexHangMultiplier - 1) * rb.mass),
+                ForceMode2D.Force
+            );
+        }
+        else if (rb.linearVelocity.y < 0)
+        {
+            _currentFallMultiplier = Mathf.Lerp(
+                _currentFallMultiplier,
+                fallMultiplier,
+                fallAcceleration * Time.fixedDeltaTime
+            );
+
+            rb.AddForce(
+                Physics2D.gravity * ((_currentFallMultiplier - 1) * rb.mass),
+                ForceMode2D.Force
+            );
+        }
+        else
+        {
+            _currentFallMultiplier = 1f;
+        }
+        
+        if (rb.linearVelocity.y < maxFallSpeed)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, maxFallSpeed);
         }
     }
 
@@ -62,7 +97,6 @@ public class PlayerController : MonoBehaviour
         _coyoteTime = 0;
         _jumpBuffer = 0;
         _isJumping = true;
-        _jumpInputReleased = false;
     }
 
     public void OnJump()
@@ -70,14 +104,13 @@ public class PlayerController : MonoBehaviour
         _jumpBuffer = jumpBufferWindow;
     }
 
-    public void OnJumpUp()
+    private void OnJumpUp()
     {
         if (rb.linearVelocity.y > 0 && _isJumping)
         {
             rb.AddForce(Vector2.down * (rb.linearVelocity.y * jumpCutMultiplier), ForceMode2D.Impulse);
         }
-
-        _jumpInputReleased = true;
+        
         _coyoteTime = 0;
     }
     void Update()
