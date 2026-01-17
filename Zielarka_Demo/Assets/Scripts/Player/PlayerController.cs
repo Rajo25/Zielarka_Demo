@@ -11,16 +11,29 @@ public class PlayerController : MonoBehaviour
     public float velPower = 10f;
     private float _moveInput;
     public float frictionAmount = 0.2f;
+   
     [Header("GroundCheck")]
     private bool _isGrounded;
     public LayerMask whatIsGround;
     public Vector2 groundCheckOffset;
     public Vector2 groundCheckRadius;
+    
+    [Header("Jump")]
+    private float _jumpInput;
+    public float jumpForce = 10f;
+    public float coyoteTimeWindow = 10f;
+    public float _coyoteTime = 10f;
+    public float jumpBufferWindow = 10f;
+    public float _jumpBuffer = 10f;
+    private bool _isJumping;
         
     private void FixedUpdate()
     {
         Movement();
-        Jump();
+        if (_jumpBuffer > 0 && _coyoteTime > 0 && !_isJumping)
+        {
+            Jump();
+        }
     }
 
     private void Movement()
@@ -43,14 +56,34 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        _coyoteTime = 0;
+        _jumpBuffer = 0;
+        _isJumping = true;
+    }
+
+    public void OnJump()
+    {
+        _jumpBuffer = jumpBufferWindow;
     }
     void Update()
     {
+        if (Input.GetButtonDown("Jump"))
+        {
+            _jumpBuffer = jumpBufferWindow;
+        }
         _moveInput = Input.GetAxis("Horizontal");
         _isGrounded = Physics2D.OverlapBox(
             (Vector2)transform.position + groundCheckOffset, 
             groundCheckRadius, 0, whatIsGround);
+        if (_isGrounded)
+        {
+            _coyoteTime = coyoteTimeWindow;
+            _isJumping = false;
+        }
+
+        _coyoteTime -= Time.deltaTime;
+        _jumpBuffer -= Time.deltaTime;
     }
     
     private void OnDrawGizmos()
