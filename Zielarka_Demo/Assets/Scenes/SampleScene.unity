@@ -204,11 +204,10 @@ MonoBehaviour:
     m_Bits: 64
   groundCheckOffset: {x: 0, y: -0.5}
   groundCheckRadius: {x: 0.5, y: 0.1}
-  jumpForce: 10
+  jumpForce: 8
   coyoteTimeWindow: 0.2
-  _coyoteTime: 0
   jumpBufferWindow: 0.2
-  _jumpBuffer: 0
+  jumpCutMultiplier: 0.5
 --- !u!1 &87400027
 GameObject:
   m_ObjectHideFlags: 0

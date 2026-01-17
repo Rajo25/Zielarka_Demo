@@ -22,10 +22,12 @@ public class PlayerController : MonoBehaviour
     private float _jumpInput;
     public float jumpForce = 10f;
     public float coyoteTimeWindow = 10f;
-    public float _coyoteTime = 10f;
+    private float _coyoteTime;
     public float jumpBufferWindow = 10f;
-    public float _jumpBuffer = 10f;
+    private float _jumpBuffer;
     private bool _isJumping;
+    public float jumpCutMultiplier = 10f;
+    private bool _jumpInputReleased;
         
     private void FixedUpdate()
     {
@@ -60,11 +62,23 @@ public class PlayerController : MonoBehaviour
         _coyoteTime = 0;
         _jumpBuffer = 0;
         _isJumping = true;
+        _jumpInputReleased = false;
     }
 
     public void OnJump()
     {
         _jumpBuffer = jumpBufferWindow;
+    }
+
+    public void OnJumpUp()
+    {
+        if (rb.linearVelocity.y > 0 && _isJumping)
+        {
+            rb.AddForce(Vector2.down * (rb.linearVelocity.y * jumpCutMultiplier), ForceMode2D.Impulse);
+        }
+
+        _jumpInputReleased = true;
+        _coyoteTime = 0;
     }
     void Update()
     {
@@ -72,11 +86,15 @@ public class PlayerController : MonoBehaviour
         {
             _jumpBuffer = jumpBufferWindow;
         }
+        if (Input.GetButtonUp("Jump"))
+        {
+            OnJumpUp();
+        }
         _moveInput = Input.GetAxis("Horizontal");
         _isGrounded = Physics2D.OverlapBox(
             (Vector2)transform.position + groundCheckOffset, 
             groundCheckRadius, 0, whatIsGround);
-        if (_isGrounded)
+        if (_isGrounded && rb.linearVelocity.y <= 0)
         {
             _coyoteTime = coyoteTimeWindow;
             _isJumping = false;
