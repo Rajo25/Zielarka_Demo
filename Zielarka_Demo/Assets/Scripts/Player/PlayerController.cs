@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
+    private bool facingRight = true;
     [Header("Movement")]
     public float moveSpeed = 10f;
     public float acceleration = 10f;
@@ -71,6 +72,16 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, maxFallSpeed);
         }
+
+        if (_moveInput > 0 && !facingRight)
+        {
+            Flip();
+        }
+
+        if (_moveInput < 0 && facingRight)
+        {
+            Flip();
+        }
     }
 
     private void Movement()
@@ -135,6 +146,15 @@ public class PlayerController : MonoBehaviour
 
         _coyoteTime -= Time.deltaTime;
         _jumpBuffer -= Time.deltaTime;
+    }
+
+    void Flip()
+    {
+        Vector2 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
     
     private void OnDrawGizmos()
