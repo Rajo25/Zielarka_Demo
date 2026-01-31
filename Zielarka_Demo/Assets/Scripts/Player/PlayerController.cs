@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -5,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
     private bool _facingRight = true;
+    private RigidbodyConstraints2D _defaultConstraints;
     [Header("Movement")]
     public float moveSpeed = 10f;
     public float acceleration = 10f;
@@ -44,7 +46,11 @@ public class PlayerController : MonoBehaviour
     [Header("Apex Hang")]
     public float apexThreshold = 0.5f;
     public float apexHangMultiplier = 0.4f;
-        
+
+    void Start()
+    {
+        _defaultConstraints = rb.constraints;
+    }
     private void FixedUpdate()
     {
         Movement();
@@ -91,6 +97,8 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
+
+        WallCling();
     }
 
     private void Movement()
@@ -163,6 +171,21 @@ public class PlayerController : MonoBehaviour
         _isLeftWall = Physics2D.OverlapBox(
             (Vector2)transform.position + leftWallCheckOffset, 
             leftWallCheckRadius, 0, whatIsWall);
+    }
+
+    void WallCling()
+    {
+        bool isOnWall = (_isRightWall || _isLeftWall);
+    
+        if (isOnWall && !_isGrounded && !Input.GetButton("Jump") && !Input.GetKey("s"))
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+        } 
+        else
+        {
+            rb.constraints = _defaultConstraints;
+        }
     }
 
     void Flip()
