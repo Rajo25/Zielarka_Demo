@@ -204,6 +204,13 @@ MonoBehaviour:
     m_Bits: 64
   groundCheckOffset: {x: 0, y: -0.9}
   groundCheckRadius: {x: 0.5, y: 0.1}
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 128
+  rightWallCheckOffset: {x: 0.33, y: 0}
+  rightWallCheckRadius: {x: 0.1, y: 1.7}
+  leftWallCheckOffset: {x: -0.33, y: 0}
+  leftWallCheckRadius: {x: 0.1, y: 1.7}
   jumpForce: 16
   coyoteTimeWindow: 0.2
   jumpBufferWindow: 0.2

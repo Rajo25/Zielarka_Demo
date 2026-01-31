@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
-    private bool facingRight = true;
+    private bool _facingRight = true;
     [Header("Movement")]
     public float moveSpeed = 10f;
     public float acceleration = 10f;
@@ -18,6 +18,14 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     public Vector2 groundCheckOffset;
     public Vector2 groundCheckRadius;
+    
+    [Header("Wall Check")]
+    private bool _isWall;
+    public LayerMask whatIsWall;
+    public Vector2 rightWallCheckOffset;
+    public Vector2 rightWallCheckRadius;
+    public Vector2 leftWallCheckOffset;
+    public Vector2 leftWallCheckRadius;
     
     [Header("Jump")]
     private float _jumpInput;
@@ -73,12 +81,12 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, maxFallSpeed);
         }
 
-        if (_moveInput > 0 && !facingRight)
+        if (_moveInput > 0 && !_facingRight)
         {
             Flip();
         }
 
-        if (_moveInput < 0 && facingRight)
+        if (_moveInput < 0 && _facingRight)
         {
             Flip();
         }
@@ -146,6 +154,14 @@ public class PlayerController : MonoBehaviour
 
         _coyoteTime -= Time.deltaTime;
         _jumpBuffer -= Time.deltaTime;
+        
+        _isWall = Physics2D.OverlapBox(
+            (Vector2)transform.position + rightWallCheckOffset, 
+            rightWallCheckRadius, 0, whatIsWall);
+        
+        _isWall = Physics2D.OverlapBox(
+            (Vector2)transform.position + leftWallCheckOffset, 
+            leftWallCheckRadius, 0, whatIsWall);
     }
 
     void Flip()
@@ -154,7 +170,7 @@ public class PlayerController : MonoBehaviour
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
 
-        facingRight = !facingRight;
+        _facingRight = !_facingRight;
     }
     
     private void OnDrawGizmos()
@@ -163,5 +179,13 @@ public class PlayerController : MonoBehaviour
 
         Vector2 boxPosition = (Vector2)transform.position + groundCheckOffset;
         Gizmos.DrawWireCube(boxPosition, groundCheckRadius);
+        
+        Gizmos.color = _isWall ? Color.green : Color.red;
+
+        Vector2 rightBoxPosition = (Vector2)transform.position + rightWallCheckOffset;
+        Gizmos.DrawWireCube(rightBoxPosition, rightWallCheckRadius);
+        
+        Vector2 leftBoxPosition = (Vector2)transform.position + leftWallCheckOffset;
+        Gizmos.DrawWireCube(leftBoxPosition, leftWallCheckRadius);
     }
 }
