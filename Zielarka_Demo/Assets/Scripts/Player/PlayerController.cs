@@ -46,6 +46,11 @@ public class PlayerController : MonoBehaviour
     [Header("Apex Hang")]
     public float apexThreshold = 0.5f;
     public float apexHangMultiplier = 0.4f;
+    
+    [Header("Wall Jump")]
+    public Vector2 wallJumpForce = new Vector2(12f, 14f);
+    public float wallJumpControlLerp = 5f;
+    private bool _isWallJumping;
 
     void Start()
     {
@@ -99,10 +104,22 @@ public class PlayerController : MonoBehaviour
         }
 
         WallCling();
+        
+        if (_isWallJumping)
+        {
+            float targetX = _moveInput * moveSpeed;
+            float lerpedX = Mathf.Lerp(rb.linearVelocity.x, targetX, wallJumpControlLerp * Time.fixedDeltaTime);
+            rb.linearVelocity = new Vector2(lerpedX, rb.linearVelocity.y);
+
+            if (rb.linearVelocity.y <= 0)
+                _isWallJumping = false;
+        }
     }
 
     private void Movement()
     {
+        if (_isWallJumping) return;
+        
         float targetSpeed = _moveInput * moveSpeed * 100 * Time.deltaTime;
         float speedDiff = targetSpeed - rb.linearVelocity.x;
         float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : deceleration;
@@ -146,6 +163,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             _jumpBuffer = jumpBufferWindow;
+            WallJump();
         }
         if (Input.GetButtonUp("Jump"))
         {
@@ -177,6 +195,7 @@ public class PlayerController : MonoBehaviour
     {
         if (
             !_isGrounded &&
+            !_isWallJumping &&
             !Input.GetButton("Jump") &&
             (
                 (_isLeftWall && _moveInput < 0) ||
@@ -191,6 +210,34 @@ public class PlayerController : MonoBehaviour
         {
             rb.constraints = _defaultConstraints;
         }
+    }
+
+    void WallJump()
+    {
+        bool isOnWall =
+            !_isGrounded &&
+            (
+                (_isLeftWall && _moveInput < 0) ||
+                (_isRightWall && _moveInput > 0)
+            );
+
+        if (!isOnWall) return;
+        
+        rb.constraints = _defaultConstraints;
+
+        _isWallJumping = true;
+        _isJumping = true;
+        _coyoteTime = 0;
+        _jumpBuffer = 0;
+
+        float direction = -Mathf.Sign(_moveInput);
+        
+        rb.linearVelocity = Vector2.zero;
+
+        rb.AddForce(
+            new Vector2(direction * wallJumpForce.x, wallJumpForce.y),
+            ForceMode2D.Impulse
+        );  
     }
 
     void Flip()

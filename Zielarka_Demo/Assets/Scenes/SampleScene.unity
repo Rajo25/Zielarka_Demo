@@ -220,6 +220,8 @@ MonoBehaviour:
   fallAcceleration: 5
   apexThreshold: 0.5
   apexHangMultiplier: 0.4
+  wallJumpForce: {x: 10, y: 14}
+  wallJumpControlLerp: 5
 --- !u!1 &52338238
 GameObject:
   m_ObjectHideFlags: 0
