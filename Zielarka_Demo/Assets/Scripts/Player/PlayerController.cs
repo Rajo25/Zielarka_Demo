@@ -175,13 +175,18 @@ public class PlayerController : MonoBehaviour
 
     void WallCling()
     {
-        bool isOnWall = (_isRightWall || _isLeftWall);
-    
-        if (isOnWall && !_isGrounded && !Input.GetButton("Jump") && !Input.GetKey("s"))
+        if (
+            !_isGrounded &&
+            !Input.GetButton("Jump") &&
+            (
+                (_isLeftWall && _moveInput < 0) ||
+                (_isRightWall && _moveInput > 0)
+            )
+        )
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
-        } 
+        }
         else
         {
             rb.constraints = _defaultConstraints;
