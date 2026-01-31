@@ -20,7 +20,8 @@ public class PlayerController : MonoBehaviour
     public Vector2 groundCheckRadius;
     
     [Header("Wall Check")]
-    private bool _isWall;
+    private bool _isRightWall;
+    private bool _isLeftWall;
     public LayerMask whatIsWall;
     public Vector2 rightWallCheckOffset;
     public Vector2 rightWallCheckRadius;
@@ -155,11 +156,11 @@ public class PlayerController : MonoBehaviour
         _coyoteTime -= Time.deltaTime;
         _jumpBuffer -= Time.deltaTime;
         
-        _isWall = Physics2D.OverlapBox(
+        _isRightWall = Physics2D.OverlapBox(
             (Vector2)transform.position + rightWallCheckOffset, 
             rightWallCheckRadius, 0, whatIsWall);
         
-        _isWall = Physics2D.OverlapBox(
+        _isLeftWall = Physics2D.OverlapBox(
             (Vector2)transform.position + leftWallCheckOffset, 
             leftWallCheckRadius, 0, whatIsWall);
     }
@@ -180,10 +181,12 @@ public class PlayerController : MonoBehaviour
         Vector2 boxPosition = (Vector2)transform.position + groundCheckOffset;
         Gizmos.DrawWireCube(boxPosition, groundCheckRadius);
         
-        Gizmos.color = _isWall ? Color.green : Color.red;
+        Gizmos.color = _isRightWall ? Color.green : Color.red;
 
         Vector2 rightBoxPosition = (Vector2)transform.position + rightWallCheckOffset;
         Gizmos.DrawWireCube(rightBoxPosition, rightWallCheckRadius);
+        
+        Gizmos.color = _isLeftWall ? Color.green : Color.red;
         
         Vector2 leftBoxPosition = (Vector2)transform.position + leftWallCheckOffset;
         Gizmos.DrawWireCube(leftBoxPosition, leftWallCheckRadius);

@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   rb: {fileID: 2929000}
-  moveSpeed: 10
+  moveSpeed: 8
   acceleration: 6
   deceleration: 8
   velPower: 2
