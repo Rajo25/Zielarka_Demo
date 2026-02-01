@@ -222,6 +222,7 @@ MonoBehaviour:
   apexHangMultiplier: 0.4
   wallJumpForce: {x: 10, y: 14}
   wallJumpControlLerp: 5
+  anim: {fileID: 0}
 --- !u!1 &52338238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,6 +1583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 800310183}
   - component: {fileID: 800310184}
+  - component: {fileID: 800310185}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -1599,7 +1601,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 0.18, y: 0.18, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2928999}
@@ -1651,7 +1653,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5818267361786674800, guid: 374e691c4ec4b49459c1a4248a634417, type: 3}
+  m_Sprite: {fileID: 8263590725725303185, guid: 4174a9ff5a5d7da419d114b36f3978bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1662,6 +1664,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &800310185
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800310182}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 055488db8bf243e4283997c35856bddb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &811954532
 GameObject:
   m_ObjectHideFlags: 0

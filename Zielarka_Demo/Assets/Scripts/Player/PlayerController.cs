@@ -52,9 +52,12 @@ public class PlayerController : MonoBehaviour
     public float wallJumpControlLerp = 5f;
     private bool _isWallJumping;
 
+    public Animator anim; 
+
     void Start()
     {
         _defaultConstraints = rb.constraints;
+        anim = GetComponentInChildren<Animator>();
     }
     private void FixedUpdate()
     {
@@ -189,6 +192,15 @@ public class PlayerController : MonoBehaviour
         _isLeftWall = Physics2D.OverlapBox(
             (Vector2)transform.position + leftWallCheckOffset, 
             leftWallCheckRadius, 0, whatIsWall);
+
+        if(_moveInput != 0 && _isGrounded){
+            anim.SetBool("iswalking", true);
+        }
+        else
+        {
+            anim.SetBool("iswalking", false);
+        }
+       
     }
 
     void WallCling()
