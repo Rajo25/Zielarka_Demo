@@ -193,14 +193,37 @@ public class PlayerController : MonoBehaviour
             (Vector2)transform.position + leftWallCheckOffset, 
             leftWallCheckRadius, 0, whatIsWall);
 
-        if(_moveInput != 0 && _isGrounded){
+        if (_moveInput != 0 && _isGrounded) {
             anim.SetBool("iswalking", true);
         }
         else
         {
             anim.SetBool("iswalking", false);
         }
-       
+        if (_isJumping){
+            anim.SetBool("isjumping", true);
+        }
+        else
+        {
+            anim.SetBool("isjumping", false);
+        }
+        //if (_isGrounded)
+        //{
+        //    anim.SetBool("islanding", true);
+        //}
+        //else
+        //{
+        //    anim.SetBool("islanding", false);
+        //}
+        //if (rb.velocity.y < -0.01f)
+        //{
+        //    anim.SetBool("isfalling", true);
+        //{
+        //else
+        //{
+        //    anim.SetBool("isfalling", false);
+        //}
+
     }
 
     void WallCling()
