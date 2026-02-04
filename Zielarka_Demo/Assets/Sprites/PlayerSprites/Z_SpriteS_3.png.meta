@@ -130,12 +130,12 @@ TextureImporter:
       name: Z_SpriteS_3_0
       rect:
         serializedVersion: 2
-        x: 288
-        y: 27
-        width: 425
-        height: 996
+        x: 0
+        y: 2
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -152,12 +152,12 @@ TextureImporter:
       name: Z_SpriteS_3_1
       rect:
         serializedVersion: 2
-        x: 1359
-        y: 62
-        width: 424
-        height: 898
+        x: 1024
+        y: 2
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -174,12 +174,12 @@ TextureImporter:
       name: Z_SpriteS_3_2
       rect:
         serializedVersion: 2
-        x: 2353
-        y: 62
-        width: 519
-        height: 859
+        x: 2048
+        y: 2
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,12 +196,12 @@ TextureImporter:
       name: Z_SpriteS_3_3
       rect:
         serializedVersion: 2
-        x: 3411
-        y: 62
-        width: 366
-        height: 898
+        x: 3072
+        y: 2
+        width: 1024
+        height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -214,143 +214,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Z_SpriteS_3_4
-      rect:
-        serializedVersion: 2
-        x: 3897
-        y: 553
-        width: 47
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aec77189ca481a340800000000000000
-      internalID: 4873322148612504810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Z_SpriteS_3_5
-      rect:
-        serializedVersion: 2
-        x: 3774
-        y: 387
-        width: 86
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed2b41bca3af99dd0800000000000000
-      internalID: -2478674989468568866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Z_SpriteS_3_6
-      rect:
-        serializedVersion: 2
-        x: 3905
-        y: 468
-        width: 42
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ca5f435e0615147b0800000000000000
-      internalID: -5241819014678383188
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Z_SpriteS_3_7
-      rect:
-        serializedVersion: 2
-        x: 3879
-        y: 370
-        width: 35
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c0a9d361e7cf55b0800000000000000
-      internalID: -5377359659200307004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Z_SpriteS_3_8
-      rect:
-        serializedVersion: 2
-        x: 3744
-        y: 252
-        width: 46
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a896abfc279df430800000000000000
-      internalID: 3818374278536403109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Z_SpriteS_3_9
-      rect:
-        serializedVersion: 2
-        x: 3828
-        y: 314
-        width: 35
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 100717d02995af960800000000000000
-      internalID: 7636514601985732609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8d7409e98bb68fb49aee8ec1ce012579
     internalID: 0
     vertices: []
     indices: 
@@ -358,18 +226,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1024.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Z_SpriteS_3_0: -2709191318484767813
       Z_SpriteS_3_1: -6213585651995597767
       Z_SpriteS_3_2: 5974502548004442746
       Z_SpriteS_3_3: 2474538865786462896
-      Z_SpriteS_3_4: 4873322148612504810
-      Z_SpriteS_3_5: -2478674989468568866
-      Z_SpriteS_3_6: -5241819014678383188
-      Z_SpriteS_3_7: -5377359659200307004
-      Z_SpriteS_3_8: 3818374278536403109
-      Z_SpriteS_3_9: 7636514601985732609
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
