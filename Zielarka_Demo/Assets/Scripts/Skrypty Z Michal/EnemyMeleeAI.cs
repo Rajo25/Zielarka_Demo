@@ -1,5 +1,5 @@
+using Player.Combat;
 using UnityEngine;
-using AbilitiesSystem.Scripts;  
 
 public class EnemyMeleeAI : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class EnemyMeleeAI : MonoBehaviour
     [SerializeField] private int damage = 10;
     [SerializeField] private float attackCooldown = 1f;
 
-    private Transform player;
+    public Transform player;
     private Vector2 patrolTarget;
     private bool waiting;
     private float waitTimer;
@@ -24,7 +24,6 @@ public class EnemyMeleeAI : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
         SetNewPatrolPoint();
     }
 

@@ -1,5 +1,5 @@
+using Player.Combat;
 using UnityEngine;
-using AbilitiesSystem.Scripts; 
 
 public class EnemyBullet : MonoBehaviour
 {
