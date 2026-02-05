@@ -195,7 +195,7 @@ public class PlayerController : MonoBehaviour
 
         anim.SetBool("iswalking", _moveInput != 0 && _isGrounded);
         anim.SetBool("isjumping", _isJumping);
-        anim.SetBool("isfalling", rb.velocity.y < -0.01f);
+        anim.SetBool("isfalling", rb.linearVelocity.y < -0.05f);
         anim.SetBool("islanding", _isGrounded);
     }
 
