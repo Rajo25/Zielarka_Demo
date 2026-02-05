@@ -1584,6 +1584,7 @@ GameObject:
   - component: {fileID: 800310183}
   - component: {fileID: 800310184}
   - component: {fileID: 800310185}
+  - component: {fileID: 800310186}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -1600,7 +1601,7 @@ Transform:
   m_GameObject: {fileID: 800310182}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.03, y: -0.08, z: 0}
   m_LocalScale: {x: 0.18, y: 0.18, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1686,6 +1687,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &800310186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800310182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc89f08e58d7b2846bd6c4c58b53bc36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animations
 --- !u!1 &811954532
 GameObject:
   m_ObjectHideFlags: 0

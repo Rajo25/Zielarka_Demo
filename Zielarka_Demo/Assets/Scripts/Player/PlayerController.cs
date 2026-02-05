@@ -213,10 +213,12 @@ public class PlayerController : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+            anim.SetBool("iswallcling", true);
         }
         else
         {
             rb.constraints = _defaultConstraints;
+            anim.SetBool("iswallcling", false);
         }
     }
 
