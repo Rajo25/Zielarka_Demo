@@ -10,6 +10,7 @@ public class GameMenuManager : MonoBehaviour
     public GameObject optionsPanel;
     public GameObject feedbackPanel;
     public GameObject pauseMenuPanel;
+    public GameObject creditsPanel; // <-- nowy panel Credits
 
     [Header("Options")]
     public Slider musicSlider;
@@ -66,10 +67,22 @@ public class GameMenuManager : MonoBehaviour
         mainMenuPanel.SetActive(false);
     }
 
+    public void OpenCredits()
+    {
+        creditsPanel.SetActive(true);
+        mainMenuPanel.SetActive(false);
+    }
+
+    public void CloseCredits()
+    {
+        creditsPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
+    }
+
     public void ExitGame()
     {
         Debug.Log("Exit Game");
-        Application.Quit();
+        Application.Quit(); // zamyka grę w buildzie
     }
 
     #endregion

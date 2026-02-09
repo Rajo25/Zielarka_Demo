@@ -2272,6 +2272,7 @@ MonoBehaviour:
   optionsPanel: {fileID: 392858827}
   feedbackPanel: {fileID: 1792518504}
   pauseMenuPanel: {fileID: 1590011008}
+  creditsPanel: {fileID: 355967262}
   musicSlider: {fileID: 420324876}
   sfxSlider: {fileID: 2059013587}
   languageDropdown: {fileID: 1527802531}
@@ -4293,13 +4294,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1341314934}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1341314935}
+        m_TargetAssemblyTypeName: GameMenuManager, Assembly-CSharp
+        m_MethodName: OpenCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
