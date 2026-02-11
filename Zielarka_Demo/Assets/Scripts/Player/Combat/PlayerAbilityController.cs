@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AbilityController : MonoBehaviour
+public class PlayerAbilityController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

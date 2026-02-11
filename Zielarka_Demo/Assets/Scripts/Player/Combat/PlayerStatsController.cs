@@ -2,23 +2,20 @@ using UnityEngine;
 
 namespace Player.Combat
 {
-    public class HealthController : MonoBehaviour
+    public class PlayerStatsController : MonoBehaviour
     {
         public int maxHealth = 100;
         private int _currentHealth;
+        public int maxMana = 10;
+        private int _currentMana;
+        
 
         void Start()
         {
             _currentHealth = maxHealth;
+            _currentMana = maxMana;
         }
-
-        public void TakeDamage(float damage)
-        {
-            _currentHealth -= (int)damage;
-
-            if (_currentHealth <= 0)
-                Die();
-        }
+        
 
         private void Die()
         {

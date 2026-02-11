@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.Combat.HealthController
   maxHealth: 10
+  maxMana: 10
 --- !u!1 &87400027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,6 +1487,7 @@ GameObject:
   - component: {fileID: 1428581944}
   - component: {fileID: 1428581945}
   - component: {fileID: 1428581946}
+  - component: {fileID: 1428581947}
   m_Layer: 0
   m_Name: Enemy_01
   m_TagString: Untagged
@@ -1552,6 +1554,20 @@ MonoBehaviour:
   pointA: {fileID: 1320910765}
   pointB: {fileID: 526623789}
   speed: 2
+--- !u!114 &1428581947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428581943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00d22e8db21c8644871561c16e21b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyStatsController
+  maxHealth: 10
+  maxStamina: 0
 --- !u!1 &1494356344
 GameObject:
   m_ObjectHideFlags: 0
