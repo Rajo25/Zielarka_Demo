@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthController : MonoBehaviour
 {
@@ -41,6 +42,16 @@ public class HealthController : MonoBehaviour
         {
             Die();
         }
+        
+        if (_isDead && isPlayer)
+        {
+            _dyingTimer -= Time.deltaTime;
+
+            if (_dyingTimer <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
     }
 
     void TakeDamage(int damage)
@@ -66,7 +77,7 @@ public class HealthController : MonoBehaviour
     void Die()
     {
         _isDead = true;
-        print("died");
+        _dyingTimer = dyingTime;
     }
     
 }
