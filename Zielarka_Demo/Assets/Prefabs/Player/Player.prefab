@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 4968375383389592883}
   - component: {fileID: 7026470040307101865}
   - component: {fileID: 4970635975091728508}
+  - component: {fileID: 5852327563741219188}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -281,6 +282,23 @@ MonoBehaviour:
   wallJumpForce: {x: 10, y: 14}
   wallJumpControlLerp: 5
   anim: {fileID: 0}
+--- !u!114 &5852327563741219188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6925855833285694252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 879e8b759b5b3864483055d78aa19fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthController
+  health: 10
+  currentHealth: 0
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &8556602109874579259
 GameObject:
   m_ObjectHideFlags: 0

@@ -119,25 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &2928998 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6925855833285694252, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
-  m_PrefabInstance: {fileID: 592523121722704824}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2929002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2928998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 879e8b759b5b3864483055d78aa19fa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthController
-  health: 10
-  currentHealth: 0
 --- !u!1 &87400027
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,25 +921,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1982568736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1428581943 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2993487383625917230, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
-  m_PrefabInstance: {fileID: 7019890020397367181}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1428581948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428581943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 879e8b759b5b3864483055d78aa19fa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthController
-  health: 10
-  currentHealth: 0
 --- !u!1 &1494356344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,10 +1701,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6925855833285694252, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2929002}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
 --- !u!1001 &7019890020397367181
 PrefabInstance:
@@ -1752,6 +1711,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 755817444785344525, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2609087176675488170, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.13
@@ -1792,6 +1755,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2993487383625917230, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7765506705733253285, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
       propertyPath: m_Name
       value: Enemy_01_PatrolPoints
@@ -1799,10 +1766,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2993487383625917230, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1428581948}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
