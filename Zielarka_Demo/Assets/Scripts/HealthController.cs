@@ -3,10 +3,22 @@ using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
+    [Header("hpControl")]
     public int health = 10;
     [SerializeField] private int currentHealth;
     private bool _isDamaged;
     public LayerMask whatIsEnemy;
+
+    [Header("parry")] 
+    private bool _isInvincible;
+    public float invincibilityWindow;
+    private float _invincibilityTimer;
+    
+    [Header("death")]
+    public bool isPlayer;
+    private bool _isDead;
+    public float dyingTime;
+    private float _dyingTimer;
 
     void Start()
     {
@@ -15,8 +27,17 @@ public class HealthController : MonoBehaviour
 
     void Update()
     {
+        if (_isInvincible)
+        {
+            _invincibilityTimer -= Time.deltaTime;
+
+            if (_invincibilityTimer <= 0)
+            {
+                _isInvincible = false;
+            }
+        }
         
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !_isDead)
         {
             Die();
         }
@@ -24,8 +45,13 @@ public class HealthController : MonoBehaviour
 
     void TakeDamage(int damage)
     {
+        if (_isInvincible) return;
+        
         currentHealth -= damage;
         _isDamaged =  true;
+        
+        _isInvincible = true;
+        _invincibilityTimer = invincibilityWindow;
     }
 
     void OnCollisionEnter2D(Collision2D whatIsEnemy)
@@ -39,6 +65,8 @@ public class HealthController : MonoBehaviour
     }
     void Die()
     {
+        _isDead = true;
         print("died");
     }
+    
 }

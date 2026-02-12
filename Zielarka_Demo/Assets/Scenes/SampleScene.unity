@@ -1694,6 +1694,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5852327563741219188, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
+      propertyPath: whatIsEnemy.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852327563741219188, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
+      propertyPath: invincibilityWindow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6925855833285694252, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
       propertyPath: m_Name
       value: Player
