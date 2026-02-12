@@ -298,7 +298,10 @@ MonoBehaviour:
   currentHealth: 0
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
+  invincibilityWindow: 1
+  isPlayer: 1
+  dyingTime: 5
 --- !u!1 &8556602109874579259
 GameObject:
   m_ObjectHideFlags: 0
