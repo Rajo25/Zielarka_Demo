@@ -73,7 +73,7 @@ public class HealthController : MonoBehaviour
         
         currentHealth -= damage;
         _isDamaged = true;
-        anim.SetTrigger("is_Hurt");
+        if (currentHealth > 0) anim.SetTrigger("is_Hurt");
         enemyAnim.SetTrigger("is_Hurt");
 
 
@@ -89,7 +89,7 @@ public class HealthController : MonoBehaviour
         { 
             TakeDamage(damage.attackDamage);
             _isDamaged = false;
-            anim.SetTrigger("is_Hurt");
+            //anim.SetTrigger("is_Hurt");
         }
     }
     void Die()

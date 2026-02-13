@@ -446,6 +446,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5852327563741219188, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
+      propertyPath: dyingTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852327563741219188, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
+      propertyPath: enemyAnim
+      value: 
+      objectReference: {fileID: 2138717374}
+    - target: {fileID: 5852327563741219188, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
       propertyPath: whatIsEnemy.m_Bits
       value: 512
       objectReference: {fileID: 0}
@@ -2281,7 +2289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6677607200177534326, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
       propertyPath: attackDamage
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7765506705733253285, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
       propertyPath: m_Name
