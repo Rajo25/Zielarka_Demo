@@ -21,9 +21,15 @@ public class HealthController : MonoBehaviour
     public float dyingTime;
     private float _dyingTimer;
 
+    public bool is_hurt;
+
+    public Animator anim;
+    public Animator enemyAnim;
+
     void Start()
     {
         currentHealth = health;
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -38,11 +44,13 @@ public class HealthController : MonoBehaviour
             }
         }
         
+
         if (currentHealth <= 0 && !_isDead)
         {
             Die();
+
         }
-        
+
         if (_isDead && isPlayer)
         {
             _dyingTimer -= Time.deltaTime;
@@ -52,6 +60,11 @@ public class HealthController : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
+
+        
+        //anim.SetBool("is_hurt", false);
+        //anim.SetBool("is_dead", false);
+
     }
 
     void TakeDamage(int damage)
@@ -59,8 +72,12 @@ public class HealthController : MonoBehaviour
         if (_isInvincible) return;
         
         currentHealth -= damage;
-        _isDamaged =  true;
-        
+        _isDamaged = true;
+        anim.SetTrigger("is_Hurt");
+        enemyAnim.SetTrigger("is_Hurt");
+
+
+
         _isInvincible = true;
         _invincibilityTimer = invincibilityWindow;
     }
@@ -72,6 +89,7 @@ public class HealthController : MonoBehaviour
         { 
             TakeDamage(damage.attackDamage);
             _isDamaged = false;
+            anim.SetTrigger("is_Hurt");
         }
     }
     void Die()
@@ -81,6 +99,7 @@ public class HealthController : MonoBehaviour
         
         if (isPlayer)
         {
+            anim.SetTrigger("is_dead");
             PlayerController playerController = GetComponent<PlayerController>();
             if (playerController != null)
             {

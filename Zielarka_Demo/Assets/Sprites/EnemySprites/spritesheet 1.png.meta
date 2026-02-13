@@ -1,46 +1,46 @@
 fileFormatVersion: 2
-guid: 9a5296145681cb04aa8cb9672f808391
+guid: 2bafcd81c4f79f94a81288dbc4ec6f37
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4746359002375349842
-    second: GreenCat_SpriteSheet_0
+      213: 8020143640844766479
+    second: spritesheet_0
   - first:
-      213: 3482277831096879339
-    second: GreenCat_SpriteSheet_1
+      213: -6251682230944352461
+    second: spritesheet_1
   - first:
-      213: 7499212611971975233
-    second: GreenCat_SpriteSheet_2
+      213: -1259408508766424310
+    second: spritesheet_2
   - first:
-      213: 1333756047012871967
-    second: GreenCat_SpriteSheet_3
+      213: -5962389079421231736
+    second: spritesheet_3
   - first:
-      213: 4308359661224443293
-    second: GreenCat_SpriteSheet_4
+      213: 2788568348960109317
+    second: spritesheet_4
   - first:
-      213: 1911475788394983924
-    second: GreenCat_SpriteSheet_5
+      213: 226702753830753226
+    second: spritesheet_5
   - first:
-      213: 1897059799730167965
-    second: GreenCat_SpriteSheet_6
+      213: -7921052967969465774
+    second: spritesheet_6
   - first:
-      213: -3656392086788860445
-    second: GreenCat_SpriteSheet_7
+      213: -1370661682523340017
+    second: spritesheet_7
   - first:
-      213: 1336054080887455167
-    second: GreenCat_SpriteSheet_8
+      213: -8276262488406422588
+    second: spritesheet_8
   - first:
-      213: 1484098237477407382
-    second: GreenCat_SpriteSheet_9
+      213: -5906973516983679737
+    second: spritesheet_9
   - first:
-      213: 8663377498843649521
-    second: GreenCat_SpriteSheet_10
+      213: 5777552420452043588
+    second: spritesheet_10
   - first:
-      213: -8770878794932604870
-    second: GreenCat_SpriteSheet_11
+      213: 1269540525142108225
+    second: spritesheet_11
   - first:
-      213: -4508246552664028358
-    second: GreenCat_SpriteSheet_12
+      213: -2630129836624287915
+    second: spritesheet_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_0
+      name: spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2566f098d547ed140800000000000000
-      internalID: 4746359002375349842
+      spriteID: f0d092816264d4f60800000000000000
+      internalID: 8020143640844766479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_1
+      name: spritesheet_1
       rect:
         serializedVersion: 2
         x: 514
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be84fbbcc39835030800000000000000
-      internalID: 3482277831096879339
+      spriteID: 337b0ff32209d39a0800000000000000
+      internalID: -6251682230944352461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_2
+      name: spritesheet_2
       rect:
         serializedVersion: 2
         x: 1028
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14808b7532e821860800000000000000
-      internalID: 7499212611971975233
+      spriteID: a037fd742aea58ee0800000000000000
+      internalID: -1259408508766424310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_3
+      name: spritesheet_3
       rect:
         serializedVersion: 2
         x: 1542
@@ -217,14 +217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f1f3b37ee04728210800000000000000
-      internalID: 1333756047012871967
+      spriteID: 88ddd6ce8b6514da0800000000000000
+      internalID: -5962389079421231736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_4
+      name: spritesheet_4
       rect:
         serializedVersion: 2
         x: 2056
@@ -239,14 +239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d9db7e3094e5acb30800000000000000
-      internalID: 4308359661224443293
+      spriteID: 5033aaf832cf2b620800000000000000
+      internalID: 2788568348960109317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_5
+      name: spritesheet_5
       rect:
         serializedVersion: 2
         x: 2570
@@ -261,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f1fa042a1de68a10800000000000000
-      internalID: 1911475788394983924
+      spriteID: ac35fa714f8652300800000000000000
+      internalID: 226702753830753226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_6
+      name: spritesheet_6
       rect:
         serializedVersion: 2
         x: 3084
@@ -283,14 +283,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d90279836d5b35a10800000000000000
-      internalID: 1897059799730167965
+      spriteID: 25a502d0b44c21290800000000000000
+      internalID: -7921052967969465774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_7
+      name: spritesheet_7
       rect:
         serializedVersion: 2
         x: 3598
@@ -305,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e5966bf4c2e14dc0800000000000000
-      internalID: -3656392086788860445
+      spriteID: f0305f9367e6afce0800000000000000
+      internalID: -1370661682523340017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_8
+      name: spritesheet_8
       rect:
         serializedVersion: 2
         x: 4112
@@ -327,14 +327,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbdf10c9b1e9a8210800000000000000
-      internalID: 1336054080887455167
+      spriteID: 4cb05a6cd1fc42d80800000000000000
+      internalID: -8276262488406422588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_9
+      name: spritesheet_9
       rect:
         serializedVersion: 2
         x: 4626
@@ -349,14 +349,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69acf90eb73989410800000000000000
-      internalID: 1484098237477407382
+      spriteID: 7054c8ef1e6360ea0800000000000000
+      internalID: -5906973516983679737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_10
+      name: spritesheet_10
       rect:
         serializedVersion: 2
         x: 5140
@@ -371,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f510b54fef7a3870800000000000000
-      internalID: 8663377498843649521
+      spriteID: 44b0e3cc05dfd2050800000000000000
+      internalID: 5777552420452043588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_11
+      name: spritesheet_11
       rect:
         serializedVersion: 2
         x: 5654
@@ -393,14 +393,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a303904c434974680800000000000000
-      internalID: -8770878794932604870
+      spriteID: 148ee0d91605e9110800000000000000
+      internalID: 1269540525142108225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GreenCat_SpriteSheet_12
+      name: spritesheet_12
       rect:
         serializedVersion: 2
         x: 6168
@@ -415,8 +415,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3bc49465ad7f61c0800000000000000
-      internalID: -4508246552664028358
+      spriteID: 5576ade39d6ef7bd0800000000000000
+      internalID: -2630129836624287915
       vertices: []
       indices: 
       edges: []
@@ -425,7 +425,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a4c96921b5e75bb47afb6b4d33b0435f
+    spriteID: 24621f1769f5f394b8530781c79538c4
     internalID: 0
     vertices: []
     indices: 
@@ -437,19 +437,19 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":514.0,"y":514.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      GreenCat_SpriteSheet_0: 4746359002375349842
-      GreenCat_SpriteSheet_1: 3482277831096879339
-      GreenCat_SpriteSheet_10: 8663377498843649521
-      GreenCat_SpriteSheet_11: -8770878794932604870
-      GreenCat_SpriteSheet_12: -4508246552664028358
-      GreenCat_SpriteSheet_2: 7499212611971975233
-      GreenCat_SpriteSheet_3: 1333756047012871967
-      GreenCat_SpriteSheet_4: 4308359661224443293
-      GreenCat_SpriteSheet_5: 1911475788394983924
-      GreenCat_SpriteSheet_6: 1897059799730167965
-      GreenCat_SpriteSheet_7: -3656392086788860445
-      GreenCat_SpriteSheet_8: 1336054080887455167
-      GreenCat_SpriteSheet_9: 1484098237477407382
+      spritesheet_0: 8020143640844766479
+      spritesheet_1: -6251682230944352461
+      spritesheet_10: 5777552420452043588
+      spritesheet_11: 1269540525142108225
+      spritesheet_12: -2630129836624287915
+      spritesheet_2: -1259408508766424310
+      spritesheet_3: -5962389079421231736
+      spritesheet_4: 2788568348960109317
+      spritesheet_5: 226702753830753226
+      spritesheet_6: -7921052967969465774
+      spritesheet_7: -1370661682523340017
+      spritesheet_8: -8276262488406422588
+      spritesheet_9: -5906973516983679737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
