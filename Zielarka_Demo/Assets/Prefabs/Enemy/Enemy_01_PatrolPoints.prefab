@@ -76,8 +76,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2111025367
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 8020143640844766479, guid: fc40ec5a02e88104a972161565b2ecfc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -267,6 +267,12 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 256
+  invincibilityWindow: 0
+  isPlayer: 0
+  dyingTime: 0
+  is_hurt: 0
+  anim: {fileID: 0}
+  enemyAnim: {fileID: 0}
 --- !u!1 &7765506705733253285
 GameObject:
   m_ObjectHideFlags: 0

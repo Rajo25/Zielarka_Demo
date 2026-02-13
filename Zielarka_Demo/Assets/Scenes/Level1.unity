@@ -835,7 +835,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 356814497
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 6853316077166303748, guid: 114d756b525520641a99f45aea0a5a21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4530,7 +4530,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 356814497
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: -1955448553306655712, guid: fdeeb74ff95ed4b4db72f5df442b5aa6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7191,11 +7191,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2609087176675488170, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 98.04
+      value: 101.76
       objectReference: {fileID: 0}
     - target: {fileID: 2609087176675488170, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.28
+      value: 20.06
       objectReference: {fileID: 0}
     - target: {fileID: 2609087176675488170, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7228,6 +7228,18 @@ PrefabInstance:
     - target: {fileID: 2609087176675488170, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702522586412457084, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702522586412457084, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2702522586412457084, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2111025367
       objectReference: {fileID: 0}
     - target: {fileID: 2993487383625917230, guid: c7e9e080b0db89e4288c77d3b2830c71, type: 3}
       propertyPath: m_Layer
