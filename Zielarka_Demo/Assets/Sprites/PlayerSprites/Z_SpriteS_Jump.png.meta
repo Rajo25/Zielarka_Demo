@@ -73,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -139,12 +139,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 1024
-        height: 1024
+        x: 299
+        y: 59
+        width: 381
+        height: 887
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -161,12 +161,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_1
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 2
-        width: 1024
-        height: 1024
+        x: 1314
+        y: 58
+        width: 411
+        height: 835
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -183,12 +183,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_2
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 2
-        width: 1024
-        height: 1024
+        x: 2372
+        y: 60
+        width: 302
+        height: 942
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -205,12 +205,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_3
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 2
-        width: 1024
-        height: 1024
+        x: 3403
+        y: 57
+        width: 289
+        height: 939
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -227,12 +227,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_4
       rect:
         serializedVersion: 2
-        x: 4096
-        y: 2
-        width: 1024
-        height: 1024
+        x: 4429
+        y: 57
+        width: 289
+        height: 939
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -249,12 +249,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_5
       rect:
         serializedVersion: 2
-        x: 5120
-        y: 2
-        width: 1024
-        height: 1024
+        x: 5455
+        y: 57
+        width: 289
+        height: 939
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -271,12 +271,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_6
       rect:
         serializedVersion: 2
-        x: 6144
-        y: 2
-        width: 1024
-        height: 1024
+        x: 6370
+        y: 57
+        width: 578
+        height: 945
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -293,12 +293,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_7
       rect:
         serializedVersion: 2
-        x: 7168
-        y: 2
-        width: 1024
-        height: 1024
+        x: 7320
+        y: 75
+        width: 719
+        height: 913
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -315,12 +315,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_8
       rect:
         serializedVersion: 2
-        x: 8192
-        y: 2
-        width: 1024
-        height: 1024
+        x: 8377
+        y: 83
+        width: 699
+        height: 943
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -337,12 +337,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_9
       rect:
         serializedVersion: 2
-        x: 9216
-        y: 2
-        width: 1024
-        height: 1024
+        x: 9405
+        y: 83
+        width: 695
+        height: 943
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -359,12 +359,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_10
       rect:
         serializedVersion: 2
-        x: 10240
-        y: 2
-        width: 1024
-        height: 1024
+        x: 10434
+        y: 83
+        width: 686
+        height: 943
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -381,12 +381,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_11
       rect:
         serializedVersion: 2
-        x: 11264
-        y: 2
-        width: 1024
-        height: 1024
+        x: 11420
+        y: 66
+        width: 752
+        height: 952
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -403,12 +403,12 @@ TextureImporter:
       name: Z_SpriteS_Jump_12
       rect:
         serializedVersion: 2
-        x: 12288
-        y: 2
-        width: 1024
-        height: 1024
+        x: 12439
+        y: 62
+        width: 518
+        height: 911
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -425,7 +425,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e3bd022f724580f478ab3d6280afa36d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -433,9 +433,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1024.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
       Z_SpriteS_Jump_0: 1759442561647427371
       Z_SpriteS_Jump_1: -4024991383222296192
