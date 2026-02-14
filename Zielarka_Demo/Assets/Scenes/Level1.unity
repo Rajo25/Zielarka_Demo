@@ -20768,12 +20768,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5852327563741219188, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852327563741219188, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
       propertyPath: isPlayer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5852327563741219188, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
       propertyPath: dyingTime
-      value: 5
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 5852327563741219188, guid: 14a8c382210d26a45a8424e8f36965a4, type: 3}
       propertyPath: whatIsEnemy.m_Bits
