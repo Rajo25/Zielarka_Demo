@@ -24,7 +24,7 @@ public class HealthController : MonoBehaviour
     public bool is_hurt;
 
     public Animator anim;
-    public Animator enemyAnim;
+   // public Animator enemyAnim;
 
     void Start()
     {
@@ -74,7 +74,7 @@ public class HealthController : MonoBehaviour
         currentHealth -= damage;
         _isDamaged = true;
         if (currentHealth > 0) anim.SetTrigger("is_Hurt");
-        enemyAnim.SetTrigger("is_Hurt");
+        //enemyAnim.SetTrigger("is_Hurt");
 
 
 
